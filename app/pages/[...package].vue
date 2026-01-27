@@ -67,8 +67,6 @@ const orgName = computed(() => {
   return match ? match[1] : null
 })
 
-const { data: pkg, status, error, resolvedVersion } = usePackage(packageName, requestedVersion)
-
 const { data: downloads } = usePackageDownloads(packageName, 'last-week')
 const { data: weeklyDownloads } = usePackageWeeklyDownloadEvolution(packageName, { weeks: 52 })
 
@@ -125,6 +123,9 @@ const sizeTooltip = computed(() => {
   ]
   return chunks.filter(Boolean).join('\n')
 })
+
+const { data: pkg, status, error } = await usePackage(packageName, requestedVersion)
+const resolvedVersion = computed(() => pkg.value?.resolvedVersion ?? null)
 
 // Get the version to display (resolved version or latest)
 const displayVersion = computed(() => {
@@ -194,9 +195,11 @@ const PROVIDER_ICONS: Record<string, string> = {
   bitbucket: 'i-simple-icons-bitbucket',
   codeberg: 'i-simple-icons-codeberg',
   gitea: 'i-simple-icons-gitea',
+  forgejo: 'i-simple-icons-forgejo',
   gitee: 'i-simple-icons-gitee',
   sourcehut: 'i-simple-icons-sourcehut',
   tangled: 'i-custom-tangled',
+  radicle: 'i-carbon-network-3', // Radicle is a P2P network, using network icon
 }
 
 const repoProviderIcon = computed(() => {
