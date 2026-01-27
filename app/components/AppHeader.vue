@@ -26,6 +26,7 @@ const { isConnected, npmUser } = useConnector()
         >
           <span class="text-fg-subtle"><span style="letter-spacing: -0.2em">.</span>/</span>npmx
         </NuxtLink>
+        <!-- Spacer when logo is hidden -->
         <span v-else class="w-1" />
       </div>
 
