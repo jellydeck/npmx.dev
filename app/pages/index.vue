@@ -53,7 +53,6 @@ defineOgImageComponent('Default', {
         {{ $t('tagline') }}
       </p>
 
-      <!-- Search form with micro-interactions -->
       <search
         class="w-full max-w-xl motion-safe:animate-slide-up motion-safe:animate-fill-both"
         style="animation-delay: 0.2s"
@@ -101,11 +100,9 @@ defineOgImageComponent('Default', {
         </form>
       </search>
 
-      <!-- Build info badge -->
       <BuildEnvironment class="mt-4" />
     </header>
 
-    <!-- Popular packages -->
     <nav
       :aria-label="$t('nav.popular_packages')"
       class="pt-4 pb-36 sm:pb-40 text-center motion-safe:animate-fade-in motion-safe:animate-fill-both"
@@ -128,5 +125,11 @@ defineOgImageComponent('Default', {
         </li>
       </ul>
     </nav>
+
+    <section class="border-t border-border py-24 bg-bg-subtle/10">
+      <div class="container max-w-3xl mx-auto">
+        <CallToAction />
+      </div>
+    </section>
   </main>
 </template>
