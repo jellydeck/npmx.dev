@@ -50,7 +50,7 @@ const setLocale: typeof setNuxti18nLocale = locale => {
           </h1>
           <button
             type="button"
-            class="inline-flex items-center gap-2 font-mono text-sm text-fg-muted hover:text-fg transition-colors duration-200 rounded focus-visible:outline-accent/70 shrink-0 p-1.5 -mx-1.5"
+            class="inline-flex items-center gap-2 font-mono text-sm text-fg-muted hover:text-fg transition-colors duration-200 rounded focus-visible:outline-accent/70 shrink-0 p-1.5 -mx-1.5 outline-transparent focus-visible:(outline-2 outline-accent outline-offset-2)"
             @click="router.back()"
             v-show="router.options.history.state.back !== null"
           >
@@ -162,7 +162,7 @@ const setLocale: typeof setNuxti18nLocale = locale => {
                 <select
                   id="language-select"
                   :value="locale"
-                  class="w-full sm:w-auto min-w-48 bg-bg border border-border rounded-md px-3 py-2 text-sm text-fg focus-visible:outline-accent/70 cursor-pointer duration-200 transition-colors hover:border-fg-subtle"
+                  class="w-full sm:w-auto min-w-48 bg-bg border border-border rounded-md px-3 py-2 text-sm text-fg cursor-pointer duration-200 transition-colors hover:border-fg-subtle"
                   @change="setLocale(($event.target as HTMLSelectElement).value as typeof locale)"
                 >
                   <option v-for="loc in locales" :key="loc.code" :value="loc.code" :lang="loc.code">
@@ -190,15 +190,13 @@ const setLocale: typeof setNuxti18nLocale = locale => {
 
             <!-- Simple help link for source locale -->
             <template v-else>
-              <a
-                href="https://github.com/npmx-dev/npmx.dev/tree/main/i18n/locales"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm text-fg-muted hover:text-fg transition-colors duration-200 focus-visible:outline-accent/70 rounded"
+              <LinkBase
+                classicon="i-carbon:logo-github"
+                class="font-sans"
+                to="https://github.com/npmx-dev/npmx.dev/tree/main/i18n/locales"
               >
-                <span class="i-carbon:logo-github w-4 h-4" aria-hidden="true" />
                 {{ $t('settings.help_translate') }}
-              </a>
+              </LinkBase>
             </template>
           </div>
         </section>

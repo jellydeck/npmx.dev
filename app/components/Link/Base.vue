@@ -62,7 +62,7 @@ const isButtonMedium = computed(() => props.size === 'medium' && props.variant !
   <span
     v-if="disabled"
     :class="{
-      'opacity-50 inline-flex gap-x-1 items-center justify-center font-mono border border-transparent rounded-md':
+      'opacity-50 inline-flex gap-x-1 items-center justify-center font-mono border  border-red rounded-md':
         isButton,
       'text-sm px-4 py-2': isButtonMedium,
       'text-xs px-2 py-0.5': isButtonSmall,
@@ -74,18 +74,22 @@ const isButtonMedium = computed(() => props.size === 'medium' && props.variant !
   </span>
   <NuxtLink
     v-else
-    class="group inline-flex gap-x-1 items-center justify-center rounded-sm focus-visible:(outline-2 outline-accent)"
-    :class="{
-      'underline-offset-[0.2rem] underline decoration-1 decoration-fg/30': !isLinkAnchor && isLink,
-      'font-mono text-fg hover:(decoration-accent text-accent) focus-visible:(decoration-accent text-accent) transition-colors duration-200':
-        isLink,
-      'font-mono border border-border rounded-md transition-all duration-200': isButton,
-      'text-sm px-4 py-2': isButtonMedium,
-      'text-xs px-2 py-0.5': isButtonSmall,
-      'text-fg bg-transparent hover:(bg-fg/10 border-fg/10) focus-visible:(bg-fg/10)':
-        variant === 'button-secondary',
-      'text-bg bg-fg hover:(bg-fg/50) focus-visible:(bg-fg/50)': variant === 'button-primary',
-    }"
+    class="group inline-flex gap-x-1 items-center justify-center rounded-sm outline-transparent focus-visible:(outline-2 outline-accent)"
+    :class="[
+      {
+        'underline-offset-[0.2rem] underline decoration-1 decoration-fg/30':
+          !isLinkAnchor && isLink,
+        'font-mono text-fg hover:(decoration-accent) focus-visible:(decoration-accent text-accent) transition-colors duration-200':
+          isLink,
+        'font-mono border border-solid border-transparent rounded-md transition-all duration-200':
+          isButton,
+        'text-sm px-4 py-2': isButtonMedium,
+        'text-xs px-2 py-0.5': isButtonSmall,
+        'text-fg bg-transparent hover:(bg-fg/10 border-fg/10)': variant === 'button-secondary',
+        'text-bg bg-fg border-fg hover:(bg-fg/80)': variant === 'button-primary',
+      },
+      $attrs.class,
+    ]"
     :to="to"
     :aria-keyshortcuts="keyshortcut"
     :target="isLinkExternal ? '_blank' : undefined"
