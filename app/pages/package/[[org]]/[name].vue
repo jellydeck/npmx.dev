@@ -1147,7 +1147,7 @@ onKeyStroke(
       <div class="area-sidebar">
         <!-- Sidebar -->
         <div
-          class="sidebar-scroll sticky top-34 space-y-6 sm:space-y-8 min-w-0 overflow-y-auto pe-2.5 lg:(max-h-[calc(100dvh-8.5rem)] overscroll-contain) xl:(top-22 pt-2 max-h-[calc(100dvh-6rem)]) pt-1"
+          class="sidebar-scroll sticky top-34 space-y-6 sm:space-y-8 min-w-0 overflow-y-auto pe-2.5 lg:(max-h-[calc(100dvh-8.5rem)] overscroll-contain) xl:(top-22 pt-2 max-h-[calc(100dvh-6rem)]) pt-1 outline-none"
         >
           <!-- Team access controls (for scoped packages when connected) -->
           <ClientOnly>

@@ -190,15 +190,6 @@ body {
   outline: auto;
 }
 
-input:focus {
-  border: 1px solid var(--accent);
-}
-
-input[type='text']:focus-visible,
-input[type='search']:focus-visible {
-  outline: 2px solid color-mix(in oklch, var(--accent) 70%, transparent);
-}
-
 /* Reset dd margin (browser default is margin-left: 40px) */
 dd {
   margin: 0;
