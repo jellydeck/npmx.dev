@@ -25,7 +25,7 @@ const showModal = () => modalRef.value?.showModal?.()
           </LinkBase>
           <button
             type="button"
-            class="group cursor-pointer gap-x-1 items-center rounded-sm font-mono text-fg hover:decoration-accent outline-transparent active:scale-[0.98] underline underline-offset-[0.2rem] decoration-1 decoration-fg/30 outline-2 outline-transparent focus-visible:(outline-offset-2 outline-accent text-accent) transition-colors duration-200"
+            class="group cursor-pointer gap-x-1 items-center rounded-sm font-mono text-fg hover:decoration-accent active:scale-[0.98] underline underline-offset-[0.2rem] decoration-1 decoration-fg/30 outline-2 outline-transparent focus-visible:(outline-offset-2 outline-accent text-accent) transition-colors duration-200"
             @click.prevent="showModal"
             aria-haspopup="dialog"
           >
