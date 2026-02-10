@@ -79,14 +79,18 @@ const isButtonMedium = computed(() => props.size === 'medium' && !isLink.value)
     :class="{
       'flex': block,
       'inline-flex': !block,
-      'underline-offset-[0.2rem] underline decoration-1 decoration-fg/30': !isLinkAnchor && isLink,
-      'font-mono text-fg hover:(decoration-accent) focus-visible:(text-accent outline-offset-2)':
+      'underline-offset-[0.2rem] underline decoration-1 decoration-fg/30':
+        !isLinkAnchor && isLink && !noUnderline,
+      'justify-start font-mono text-fg hover:(decoration-accent) focus-visible:(text-accent outline-offset-2)':
         isLink,
-      'justify-center border border-solid border-border rounded-md  outline-offset-2': isButton,
+      'justify-center font-mono border border-solid border-border rounded-md  outline-offset-2':
+        isButton,
       'text-sm px-4 py-2': isButtonMedium,
       'text-xs px-2 py-0.5': isButtonSmall,
-      'text-bg bg-fg border-fg hover:(bg-fg/80)': variant === 'button-primary',
-      'text-fg bg-bg hover:(bg-fg/10 border-fg/10)': variant === 'button-secondary',
+      'text-bg bg-fg border-fg hover:(bg-fg/80) aria-[current=true]:(bg-fg/80)':
+        variant === 'button-primary',
+      'text-fg bg-bg hover:(bg-fg/10 border-fg/10) aria-[current=true]:(bg-fg/10 border-fg/10)':
+        variant === 'button-secondary',
     }"
     :to="to"
     :aria-keyshortcuts="ariaKeyshortcuts"
