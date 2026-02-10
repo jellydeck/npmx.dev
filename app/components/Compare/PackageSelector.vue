@@ -185,7 +185,7 @@ function handleFocus() {
             :aria-label="$t('compare.no_dependency.add_column')"
             @click="addPackage(NO_DEPENDENCY_ID)"
           >
-            <span class="text-sm text-accent italic flex items-center gap-2 block">
+            <span class="text-sm text-accent italic flex items-center gap-2">
               <span class="i-carbon:clean w-4 h-4" aria-hidden="true" />
               {{ $t('compare.no_dependency.typeahead_title') }}
             </span>
@@ -204,7 +204,10 @@ function handleFocus() {
             @click="addPackage(result.name)"
           >
             <span class="font-mono text-sm text-fg block">{{ result.name }}</span>
-            <span v-if="result.description" class="text-xs text-fg-muted truncate mt-0.5">
+            <span
+              v-if="result.description"
+              class="text-xs text-fg-muted truncate mt-0.5 w-full block"
+            >
               {{ result.description }}
             </span>
           </ButtonBase>
