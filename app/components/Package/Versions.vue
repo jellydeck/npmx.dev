@@ -581,6 +581,7 @@ function majorGroupContainsCurrent(group: (typeof otherMajorGroups.value)[0]): b
         <button
           type="button"
           class="flex items-center gap-2 text-start rounded-sm focus-visible:(outline-2 outline-offset-2 outline-accent)"
+          :class="otherVersionsContainsCurrent() ? 'bg-bg-subtle' : ''"
           :aria-expanded="otherVersionsExpanded"
           :aria-label="
             otherVersionsExpanded

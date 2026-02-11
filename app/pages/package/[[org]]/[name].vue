@@ -703,6 +703,7 @@ const showSkeleton = shallowRef(false)
             as="nav"
             :aria-label="$t('package.navigation')"
             class="ms-auto flex max-sm:(fixed bottom-4 inset-is-1/2 -translate-x-1/2 z-40 backdrop-blur-md)"
+            :style="navExtraOffsetStyle"
             :class="$style.packageNav"
           >
             <LinkBase
