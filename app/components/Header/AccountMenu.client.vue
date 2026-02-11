@@ -106,7 +106,7 @@ function openAuthModal() {
       </span>
 
       <!-- "connect" text when not connected -->
-      <span v-if="!hasAnyConnection" class="font-sans text-sm">
+      <span v-if="!hasAnyConnection" class="text-sm">
         {{ $t('account_menu.connect') }}
       </span>
 
