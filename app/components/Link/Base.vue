@@ -81,7 +81,7 @@ const isButtonMedium = computed(() => props.size === 'medium' && !isLink.value)
       'inline-flex': !block,
       'underline-offset-[0.2rem] underline decoration-1 decoration-fg/30':
         !isLinkAnchor && isLink && !noUnderline,
-      'justify-start font-mono text-fg hover:(decoration-accent) focus-visible:(text-accent outline-offset-2)':
+      'justify-start font-mono text-fg hover:(decoration-accent text-fg/80) focus-visible:(text-accent outline-offset-2)':
         isLink,
       'justify-center font-mono border border-solid border-border rounded-md  outline-offset-2':
         isButton,
