@@ -74,6 +74,7 @@ const isButtonMedium = computed(() => props.size === 'medium' && !isLink.value)
     <slot />
   </span>
   <NuxtLink
+    v-bind="props"
     v-else
     class="group/link cursor-pointer gap-x-1.5 items-center rounded-sm outline-transparent active:scale-[0.98] focus-visible:(outline-2 outline-accent) transition-colors duration-200"
     :class="{
@@ -101,7 +102,7 @@ const isButtonMedium = computed(() => props.size === 'medium' && !isLink.value)
     <!-- automatically show icon indicating external link -->
     <span
       v-if="isLinkExternal && !classicon"
-      class="i-carbon:launch rtl-flip size-[1em] opacity-50"
+      class="i-lucide:external-link rtl-flip size-[1em] opacity-50"
       aria-hidden="true"
     />
     <span

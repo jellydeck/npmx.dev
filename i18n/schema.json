@@ -457,6 +457,9 @@
         "copy_name": {
           "type": "string"
         },
+        "copy_version": {
+          "type": "string"
+        },
         "deprecation": {
           "type": "object",
           "properties": {
@@ -906,6 +909,24 @@
             },
             "y_axis_label": {
               "type": "string"
+            },
+            "filter_placeholder": {
+              "type": "string"
+            },
+            "filter_invalid": {
+              "type": "string"
+            },
+            "filter_help": {
+              "type": "string"
+            },
+            "filter_tooltip": {
+              "type": "string"
+            },
+            "filter_tooltip_link": {
+              "type": "string"
+            },
+            "no_matches": {
+              "type": "string"
             }
           },
           "additionalProperties": false
@@ -935,6 +956,9 @@
               "type": "string"
             },
             "outdated_patch": {
+              "type": "string"
+            },
+            "has_replacement": {
               "type": "string"
             }
           },
@@ -1066,6 +1090,9 @@
             "title": {
               "type": "string"
             },
+            "contributors_skip": {
+              "type": "string"
+            },
             "items": {
               "type": "object",
               "properties": {
@@ -1073,6 +1100,9 @@
                   "type": "string"
                 },
                 "likes": {
+                  "type": "string"
+                },
+                "contributors": {
                   "type": "string"
                 }
               },
