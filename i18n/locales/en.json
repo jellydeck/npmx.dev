@@ -18,6 +18,7 @@
     "source": "source",
     "social": "social",
     "chat": "chat",
+    "builders_chat": "builders",
     "keyboard_shortcuts": "keyboard shortcuts"
   },
   "shortcuts": {
@@ -64,7 +65,13 @@
       "org": "org",
       "view_user_packages": "View packages by this user",
       "view_org_packages": "View packages by this organization"
-    }
+    },
+    "instant_search": "Instant search",
+    "instant_search_on": "on",
+    "instant_search_off": "off",
+    "instant_search_turn_on": "turn on",
+    "instant_search_turn_off": "turn off",
+    "instant_search_advisory": "{label} {state} — {action}"
   },
   "nav": {
     "main_navigation": "Main",
@@ -171,7 +178,6 @@
     "skip_link": "Skip to main content",
     "warnings": "Warnings:",
     "go_back_home": "Go back home",
-    "view_on_npm": "view on npm",
     "per_week": "/ week",
     "vanity_downloads_hint": "Vanity number: no packages displayed | Vanity number: for the displayed package | Vanity number: Sum of {count} displayed packages",
     "sort": {
@@ -183,7 +189,21 @@
     "cancel": "Cancel",
     "save": "Save",
     "edit": "Edit",
-    "error": "Error"
+    "error": "Error",
+    "view_on": {
+      "npm": "view on npm",
+      "github": "View on GitHub",
+      "gitlab": "View on GitLab",
+      "bitbucket": "View on Bitbucket",
+      "codeberg": "View on Codeberg",
+      "git_repo": "View on Git repository",
+      "forgejo": "View on Forgejo",
+      "gitea": "View on Gitea",
+      "gitee": "View on Gitee",
+      "radicle": "View on Radicle",
+      "sourcehut": "View on SourceHut",
+      "tangled": "View on Tangled"
+    }
   },
   "profile": {
     "display_name": "Display Name",
@@ -305,7 +325,6 @@
     "readme": {
       "title": "Readme",
       "no_readme": "No README available.",
-      "view_on_github": "View on GitHub",
       "toc_title": "Outline",
       "callout": {
         "note": "Note",
@@ -470,7 +489,9 @@
         "estimations": "The final values are estimates based on partial data for the current period.",
         "compare": "Package download comparison line chart for: {packages}.",
         "single_package": "Downloads line chart for the {package} package.",
-        "general_description": "The Y axis represents the number of downloads. The X axis represents the date range, from {start_date} to {end_date}, with a {granularity} time period.{estimation_notice} {packages_analysis}. {watermark}."
+        "general_description": "The Y axis represents the number of downloads. The X axis represents the date range, from {start_date} to {end_date}, with a {granularity} time period.{estimation_notice} {packages_analysis}. {watermark}.",
+        "facet_bar_general_description": "Horizontal bar chart for: {packages}, comparing {facet} ({description}). {facet_analysis} {watermark}.",
+        "facet_bar_analysis": "{package_name} has a value of {value}."
       }
     },
     "downloads": {
@@ -570,9 +591,6 @@
   "connector": {
     "modal": {
       "title": "Local Connector",
-      "contributor_badge": "Contributors only",
-      "contributor_notice": "The connector is not yet published to npm. See the {link} for how to run locally.",
-      "contributor_link": "contributing guide",
       "connected": "Connected",
       "connected_as_user": "Connected as ~{user}",
       "connected_hint": "You can now manage packages and organizations from the web UI.",
@@ -881,7 +899,6 @@
       "paginated": "Paginated",
       "items_per_page": "Items per page",
       "per_page": "{count} / page",
-      "all_yolo": "All (YOLO)",
       "showing": "{start}-{end} of {total}",
       "previous": "Previous page",
       "next": "Next page",
@@ -958,6 +975,11 @@
         "description": "Chat, ask questions, and share ideas.",
         "cta": "Join Discord"
       },
+      "builders": {
+        "title": "Help build npmx",
+        "description": "Join the builders shaping the future of npmx.",
+        "cta": "Join Builders Discord"
+      },
       "follow": {
         "title": "Stay updated",
         "description": "Find out the latest on npmx.",
@@ -1028,7 +1050,9 @@
       "loading": "Loading package data...",
       "error": "Failed to load package data. Please try again.",
       "empty_title": "Select packages to compare",
-      "empty_description": "Search and add at least 2 packages above to see a side-by-side comparison of their metrics."
+      "empty_description": "Search and add at least 2 packages above to see a side-by-side comparison of their metrics.",
+      "table_view": "Table",
+      "charts_view": "Charts"
     },
     "selector": {
       "search_label": "Search for packages",

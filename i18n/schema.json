@@ -58,6 +58,9 @@
         "chat": {
           "type": "string"
         },
+        "builders_chat": {
+          "type": "string"
+        },
         "keyboard_shortcuts": {
           "type": "string"
         }
@@ -198,6 +201,24 @@
             }
           },
           "additionalProperties": false
+        },
+        "instant_search": {
+          "type": "string"
+        },
+        "instant_search_on": {
+          "type": "string"
+        },
+        "instant_search_off": {
+          "type": "string"
+        },
+        "instant_search_turn_on": {
+          "type": "string"
+        },
+        "instant_search_turn_off": {
+          "type": "string"
+        },
+        "instant_search_advisory": {
+          "type": "string"
         }
       },
       "additionalProperties": false
@@ -517,9 +538,6 @@
         "go_back_home": {
           "type": "string"
         },
-        "view_on_npm": {
-          "type": "string"
-        },
         "per_week": {
           "type": "string"
         },
@@ -555,6 +573,48 @@
         },
         "error": {
           "type": "string"
+        },
+        "view_on": {
+          "type": "object",
+          "properties": {
+            "npm": {
+              "type": "string"
+            },
+            "github": {
+              "type": "string"
+            },
+            "gitlab": {
+              "type": "string"
+            },
+            "bitbucket": {
+              "type": "string"
+            },
+            "codeberg": {
+              "type": "string"
+            },
+            "git_repo": {
+              "type": "string"
+            },
+            "forgejo": {
+              "type": "string"
+            },
+            "gitea": {
+              "type": "string"
+            },
+            "gitee": {
+              "type": "string"
+            },
+            "radicle": {
+              "type": "string"
+            },
+            "sourcehut": {
+              "type": "string"
+            },
+            "tangled": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
@@ -917,9 +977,6 @@
               "type": "string"
             },
             "no_readme": {
-              "type": "string"
-            },
-            "view_on_github": {
               "type": "string"
             },
             "toc_title": {
@@ -1416,6 +1473,12 @@
                 },
                 "general_description": {
                   "type": "string"
+                },
+                "facet_bar_general_description": {
+                  "type": "string"
+                },
+                "facet_bar_analysis": {
+                  "type": "string"
                 }
               },
               "additionalProperties": false
@@ -1712,15 +1775,6 @@
           "type": "object",
           "properties": {
             "title": {
-              "type": "string"
-            },
-            "contributor_badge": {
-              "type": "string"
-            },
-            "contributor_notice": {
-              "type": "string"
-            },
-            "contributor_link": {
               "type": "string"
             },
             "connected": {
@@ -2647,9 +2701,6 @@
             "per_page": {
               "type": "string"
             },
-            "all_yolo": {
-              "type": "string"
-            },
             "showing": {
               "type": "string"
             },
@@ -2878,6 +2929,21 @@
               },
               "additionalProperties": false
             },
+            "builders": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "cta": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
             "follow": {
               "type": "object",
               "properties": {
@@ -3089,6 +3155,12 @@
               "type": "string"
             },
             "empty_description": {
+              "type": "string"
+            },
+            "table_view": {
+              "type": "string"
+            },
+            "charts_view": {
               "type": "string"
             }
           },

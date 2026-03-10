@@ -136,7 +136,6 @@
     "skip_link": "Преминаване към основното съдържание",
     "warnings": "Предупреждения:",
     "go_back_home": "Назад към начална страница",
-    "view_on_npm": "преглед в npm",
     "per_week": "/ седмица",
     "vanity_downloads_hint": "Брой за показ: няма показани пакети | Брой за показ: за показания пакет | Брой за показ: Сума от {count} показани пакета",
     "sort": {
@@ -148,7 +147,11 @@
     "cancel": "Отказ",
     "save": "Запазване",
     "edit": "Редактиране",
-    "error": "Грешка"
+    "error": "Грешка",
+    "view_on": {
+      "npm": "преглед в npm",
+      "github": "Преглед в GitHub"
+    }
   },
   "profile": {
     "display_name": "Показвано име",
@@ -270,7 +273,6 @@
     "readme": {
       "title": "Readme",
       "no_readme": "Няма наличен README.",
-      "view_on_github": "Преглед в GitHub",
       "toc_title": "Съдържание",
       "callout": {
         "note": "Бележка",
@@ -533,9 +535,6 @@
   "connector": {
     "modal": {
       "title": "Локален конектор",
-      "contributor_badge": "Само за сътрудници",
-      "contributor_notice": "Конекторът все още не е публикуван в npm. Вижте {link} за как да го стартирате локално.",
-      "contributor_link": "ръководство за сътрудничество",
       "connected": "Свързан",
       "connected_as_user": "Свързан като ~{user}",
       "connected_hint": "Сега можете да управлявате пакети и организации от уеб интерфейса.",
@@ -844,7 +843,6 @@
       "paginated": "Със страници",
       "items_per_page": "Елементи на страница",
       "per_page": "{count} / страница",
-      "all_yolo": "Всички (YOLO)",
       "showing": "{start}-{end} от {total}",
       "previous": "Предишна страница",
       "next": "Следваща страница",
